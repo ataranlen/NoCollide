@@ -1,0 +1,5 @@
+name: NoCollide
+main: com.minetexas.nocollide.NoCollide
+version: 0.1
+author: ataranlen
+description: Disable Spawn Mob Collision
