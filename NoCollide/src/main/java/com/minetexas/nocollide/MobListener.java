@@ -11,9 +11,8 @@ import org.bukkit.event.entity.CreatureSpawnEvent.SpawnReason;
 public class MobListener implements Listener {
 	@EventHandler(priority = EventPriority.NORMAL)
 	public void onCreatureSpawnEvent(CreatureSpawnEvent event) {
-		if (event.getSpawnReason().equals(SpawnReason.SPAWNER)) {
+		if (event.getSpawnReason().equals(SpawnReason.SPAWNER) && event.getEntity() instanceof LivingEntity) {
 			LivingEntity entity = event.getEntity();
-//			entity.getAttribute(Attribute.ZOMBIE_SPAWN_REINFORCEMENTS).setBaseValue(0.0);			
 			entity.setCollidable(false);
 			return;
 		}
